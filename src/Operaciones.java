@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class Operaciones {
 	private float MIC;
 	private String complexion;
@@ -48,6 +50,30 @@ public class Operaciones {
 		String ejercicio = "Se le recomienda los siguientes ejercicios: 5 sets de 20 lagartijas, 5 sets de 20 \n abdomjinales y 5 sets de 20 squats, con un descanso de 10 segundos entre cada sets.";
 		return ejercicio;
 	}
+	
+	public String leerTxt(String direccion){
+			String texto ="";
+			
+			try {
+				BufferedReader bf = new BufferedReader(new FileReader(direccion));
+				String temp = "";
+				String bfRead;
+				while ((bfRead = bf.readLine()) != null) {
+					temp = temp + bfRead;
+				}
+				
+				texto = temp;
+			
+			}catch(Exception e){
+				System.err.println("No se encontro archivo");
+		}	
+			return texto;
+                }
+                
+	
+	
+	
+	
 	
 
 }
