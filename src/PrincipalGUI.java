@@ -248,6 +248,21 @@ public class PrincupalGUI {
 				textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + oper.Dieta());
 				complexion.setText(oper.encontrarComplexion());
 				
+				if(imc > 25){
+                                textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCsobrepeso.txt")));
+				//complexion.setText(oper.encontrarComplexion());
+                                }
+                                else if (imc < 18){
+                                textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCbajo.txt")));
+                            
+                                }
+                                
+                                else if  (imc > 18 && imc < 25){
+                                    textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCnormal.txt")));
+                                    
+                                }
+                                
+				
 			}
 		});
 		btnCalcularImc.setBounds(32, 75, 238, 25);
