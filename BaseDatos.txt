@@ -1,0 +1,3 @@
+raul,   jimenez,   raulangel,   hola123,   184,   192,   18
+daniela,  jimenez,  dani2002,  daniela123,  160,  120,  16
+adriana, cruz, adrianita, adriana123, 160, 120, 18
