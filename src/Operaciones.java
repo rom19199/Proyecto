@@ -51,15 +51,17 @@ public class Operaciones {
 		return ejercicio;
 	}
 	
-	public String leerTxt(String direccion){
+	public ArrayList<String> leerTxt(String direccion){
 			String texto ="";
+			ArrayList<String> BaseDatos = new ArrayList<String>();
 			
 			try {
 				BufferedReader bf = new BufferedReader(new FileReader(direccion));
 				String temp = "";
 				String bfRead;
+				
 				while ((bfRead = bf.readLine()) != null) {
-					temp = temp + bfRead;
+					BaseDatos.add(bfRead);
 				}
 				
 				texto = temp;
@@ -67,8 +69,64 @@ public class Operaciones {
 			}catch(Exception e){
 				System.err.println("No se encontro archivo");
 		}	
-			return texto;
+			return BaseDatos;
                 }
+                
+	
+	public void escribir(ArrayList<Usuario> usuario)
+	{
+		FileWriter fichero = null;
+        PrintWriter pw = null;
+        try
+        {
+            fichero = new FileWriter("BaseDatos.txt");
+            pw = new PrintWriter(fichero);
+
+            for (int i = 0; i < usuario.size(); i++)
+            {
+            	
+            	pw.println(usuario.get(i).toString());
+
+            	
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+           try {
+           // Nuevamente aprovechamos el finally para 
+           // asegurarnos que se cierra el fichero.
+           if (null != fichero)
+              fichero.close();
+           } catch (Exception e2) {
+              e2.printStackTrace();
+           }
+        }
+	}
+	
+	public ArrayList<Usuario> leerBase(ArrayList<String> base)
+	{
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		for(int i = 0; i < base.size(); i++)
+		{
+			String [] cliente = base.get(i).split(",");
+			usuarios.add(new Usuario(cliente[0],cliente[1],cliente[2], cliente[3],cliente[4],cliente[5], cliente[6]));
+		}
+		
+		return usuarios;
+	}
+	
+	public int clienteActual(String nombre, ArrayList<Usuario> clientes)
+	{
+		int clienteActual = 0;
+		for(int i = 0 ; i < clientes.size(); i++)
+		{
+			if(clientes.get(i).getNombre().contentEquals(nombre))
+			{
+				clienteActual = i;
+			}
+		}
+		return clienteActual;
+	}
                 
 	
 	
