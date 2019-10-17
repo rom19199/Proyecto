@@ -43,6 +43,10 @@ public class Operaciones {
 		return ejercicio;
 	
 	}
+	public String Diabetes(){
+		
+	
+	}
 	/**
 	 * @return the mIC
 	 */
@@ -54,16 +58,6 @@ public class Operaciones {
 	 */
 	public void setMIC(float mIC) {
 		MIC = mIC;
-	}
-	
-	public String Dieta() {
-		String dieta = "debe consumir un aproximado de 2500 calorias \n al dia en 3 comidas/dia. ";
-		return dieta;
-	}
-	
-	public String Ejercicio() {
-		String ejercicio = "Se le recomienda los siguientes ejercicios: 5 sets de 20 lagartijas, 5 sets de 20 \n abdomjinales y 5 sets de 20 squats, con un descanso de 10 segundos entre cada sets.";
-		return ejercicio;
 	}
 	
 	public ArrayList<String> leerTxt(String direccion){
