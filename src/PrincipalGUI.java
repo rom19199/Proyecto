@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import javax.swing.JTextArea;
 
-public class PrincupalGUI {
+public class PrinipalGUI {
 
 	private JFrame frame;
 	private JTextField txtUsuario;
@@ -59,7 +59,7 @@ public class PrincupalGUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PrincupalGUI window = new PrincupalGUI();
+					PrincipalGUI window = new PrincipalGUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -71,7 +71,7 @@ public class PrincupalGUI {
 	/**
 	 * Create the application.
 	 */
-	public PrincupalGUI() {
+	public PrincipalGUI() {
 		initialize();
 	}
 
