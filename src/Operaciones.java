@@ -3,9 +3,11 @@ import java.io.*;
 public class Operaciones {
 	private float MIC;
 	private String complexion;
+	private String ejercicio;
 	public Operaciones () {
 		MIC = 0;
 		complexion = "";
+		ejercicio = "";
 		
 	}
 	public float encontrarMIC (Calendario persona) {
@@ -27,6 +29,19 @@ public class Operaciones {
 		
 		return complexion;
 		
+	}
+	public String ejerciciosRecomendados(){
+		if (MIC > 25){
+			ejercicio = "Se recomienda hacer 30 minutos de cardio al día seguido de 4 sets de 30 sentadillas, 30 despechadas, 30 burpees, 30 abdominales y una plancha de 30 segundos. Asimismo, se recomienda aumentar el nivel a 10 repeticiones más cada mes hasta lograr resultados.";
+		}
+		if (MIC < 18){
+			ejercicio = "Se recomienda hacer 10 minutos de cardio al día seguido de 5 sets de 30 sentadillas, 30 despechadas y 30 abdominales. Le exortamos a subir el número de repeticiones cada mes a 10 más ya que de esta manera seguira haciendo esfuerzo y manipulando el muscula para que crezca.";
+		}
+		if (MIC > 18 && MIC <25){
+			ejercicio = "Se recomienda hacer 20 minutos de cardio al día seguido de 4 sets de 20 sentadillas, 20 despechadas y 20 burpees. Si desea lucir un cuerpo más marcado puede aumentar las repeticiones, pero si su meta es mantenerse en el peso ideal le exortamos a seguir nuetstra recomendación.";
+		}
+		return ejercicio;
+	
 	}
 	/**
 	 * @return the mIC
