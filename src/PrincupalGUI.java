@@ -105,7 +105,7 @@ public class PrincupalGUI {
 		txtUsuario.setBounds(102, 23, 116, 22);
 		panelLogSign.add(txtUsuario);
 		
-		JLabel lblPassword = new JLabel("Contrase\u00F1a");
+		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setBounds(12, 65, 88, 16);
 		panelLogSign.add(lblPassword);
 		
@@ -142,9 +142,9 @@ public class PrincupalGUI {
 		lblUsuarioSign.setBounds(12, 92, 56, 16);
 		panelSignUp.add(lblUsuarioSign);
 		
-		JLabel lblContraseñaSign = new JLabel("Contrase\u00F1a");
-		lblContraseñaSign.setBounds(12, 121, 76, 16);
-		panelSignUp.add(lblContraseñaSign);
+		JLabel lblPasswordSign = new JLabel("Password");
+		lblPasswordSign.setBounds(12, 121, 76, 16);
+		panelSignUp.add(lblPasswordSign);
 		
 		txtPasswordSign = new JTextField();
 		txtPasswordSign.setColumns(10);
@@ -171,31 +171,31 @@ public class PrincupalGUI {
 		btnSuscribirse.addActionListener(action);
 		panelSignUp.add(btnSuscribirse);
 		
-		JLabel lblAlturaSign = new JLabel("Altura");
-		lblAlturaSign.setBounds(249, 34, 43, 16);
+		JLabel lblAlturaSign = new JLabel("Altura (metros)");
+		lblAlturaSign.setBounds(208, 34, 107, 16);
 		panelSignUp.add(lblAlturaSign);
 		
-		JLabel lblPesoSign = new JLabel("Peso");
-		lblPesoSign.setBounds(249, 63, 35, 16);
+		JLabel lblPesoSign = new JLabel("Peso (kg)");
+		lblPesoSign.setBounds(218, 63, 66, 16);
 		panelSignUp.add(lblPesoSign);
 		
 		txtAlturaSign = new JTextField();
 		txtAlturaSign.setColumns(10);
-		txtAlturaSign.setBounds(294, 31, 116, 22);
+		txtAlturaSign.setBounds(327, 31, 116, 22);
 		panelSignUp.add(txtAlturaSign);
 		
 		txtPesoSign = new JTextField();
 		txtPesoSign.setColumns(10);
-		txtPesoSign.setBounds(294, 60, 116, 22);
+		txtPesoSign.setBounds(327, 60, 116, 22);
 		panelSignUp.add(txtPesoSign);
 		
-		JLabel lblEdadSign = new JLabel("Edad");
-		lblEdadSign.setBounds(249, 92, 35, 16);
+		JLabel lblEdadSign = new JLabel("Edad (a\u00F1os)");
+		lblEdadSign.setBounds(208, 92, 76, 16);
 		panelSignUp.add(lblEdadSign);
 		
 		txtEdadSign = new JTextField();
 		txtEdadSign.setColumns(10);
-		txtEdadSign.setBounds(294, 89, 116, 22);
+		txtEdadSign.setBounds(327, 89, 116, 22);
 		panelSignUp.add(txtEdadSign);
 		
 		
