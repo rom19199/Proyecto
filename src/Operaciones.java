@@ -43,6 +43,10 @@ public class Operaciones {
 		return ejercicio;
 	
 	}
+	public String Diabetes(){
+		
+	
+	}
 	/**
 	 * @return the mIC
 	 */
