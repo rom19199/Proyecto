@@ -141,9 +141,9 @@ public class PrincupalGUI {
 		lblUsuarioSign.setBounds(12, 92, 56, 16);
 		panelSignUp.add(lblUsuarioSign);
 		
-		JLabel lblContraseñaSign = new JLabel("Contrase\u00F1a");
-		lblContraseñaSign.setBounds(12, 121, 76, 16);
-		panelSignUp.add(lblContraseñaSign);
+		JLabel lblContraseÃ±aSign = new JLabel("Contrase\u00F1a");
+		lblContraseÃ±aSign.setBounds(12, 121, 76, 16);
+		panelSignUp.add(lblContraseÃ±aSign);
 		
 		txtPasswordSign = new JTextField();
 		txtPasswordSign.setColumns(10);
@@ -286,7 +286,7 @@ public class PrincupalGUI {
 			{
 				if(e.getSource() == btnEjercicio)
 				{
-					
+					textAreaCondicionFisica.setText(oper.ejerciciosRecomendados());
 				}
 				
 				if(e.getSource() == btnCalcularImc)
