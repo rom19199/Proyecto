@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
+import java.util.ArrayList;
 
 import com.sun.xml.internal.ws.api.Component;
 
@@ -113,7 +114,7 @@ public class PrincupalGUI {
 		txtPassword.setBounds(102, 62, 116, 22);
 		panelLogSign.add(txtPassword);
 		
-		btnSignIn = new JButton("Sign in");
+		btnSignIn = new JButton("Sign up");
 		btnSignIn.setBounds(76, 114, 97, 25);
 		btnSignIn.addActionListener(action);
 		panelLogSign.add(btnSignIn);
@@ -298,19 +299,19 @@ public class PrincupalGUI {
 					calen.setEstaturaCentimetros(Float.parseFloat(clientes.get(clienteActual).getAltura()));
 					float imc = oper.encontrarMIC(calen);
 					lblMasaCorporal.setText("Su indice de masa corporal es de: "+ String.valueOf(imc));
-					textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + oper.Dieta());
+					//textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + oper.Dieta());
 					complexion.setText(oper.encontrarComplexion());
 					if(imc > 25)
 					{
-						textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCsobrepeso.txt")));
+						textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: \n" + (oper.leerTxt("IMCsobrepeso.txt").toString()));
 					//complexion.setText(oper.encontrarComplexion());
 					}
 	                else if (imc < 18){
-	                	textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCbajo.txt")));
+	                	textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: \n" + (oper.leerTxt("IMCbajo.txt").toString()));
 	                }
 	                                
 	                else if  (imc > 18 && imc < 25){
-	                    textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: " + (oper.leerTxt("IMCnormal.txt")));
+	                    textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: \n" + (oper.leerTxt("IMCnormal.txt").toString()));
 	                              
 	                }	
 				}
