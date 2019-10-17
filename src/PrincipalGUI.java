@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import javax.swing.JTextArea;
 
-public class PrinipalGUI {
+public class PrincipalGUI {
 
 	private JFrame frame;
 	private JTextField txtUsuario;
