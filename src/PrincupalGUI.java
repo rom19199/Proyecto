@@ -1,5 +1,4 @@
 import java.awt.EventQueue;
-import com.sun.xml.internal.ws.api;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
