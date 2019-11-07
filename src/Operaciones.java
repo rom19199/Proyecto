@@ -18,14 +18,14 @@ public class Operaciones {
 	}
 	public String encontrarComplexion () {
 		if (MIC > 25) {
-			complexion = "Tiene sobrepeso";
+			complexion = "Tiene sobrepeso.";
 			
 		}
 		if (MIC < 18) {
-			complexion = "Tiene deficit de peso";
+			complexion = "Tiene déficit de peso.";
 		}
 		if (MIC > 18 && MIC < 25){
-			complexion = "Esta en el rango recomendado";
+			complexion = "Está en el rango recomendado.";
 		}
 		
 		return complexion;
@@ -33,13 +33,13 @@ public class Operaciones {
 	}
 	public String ejerciciosRecomendados(){
 		if (MIC > 25){
-			ejercicio = "Se recomienda hacer 30 minutos de cardio al dÃ­a seguido de 4 sets de 30 sentadillas, \n30 despechadas, 30 burpees, 30 abdominales y una plancha de 30 segundos. Asimismo, se recomienda \naumentar el nivel a 10 repeticiones mÃ¡s cada mes hasta lograr resultados.";
+			ejercicio = "Se recomienda hacer 30 minutos de cardio al día seguido de 4 sets de 30 sentadillas, \n30 despechadas, 30 burpees, 30 abdominales y una plancha de 30 segundos. Así mismo, se recomienda \naumentar el nivel a 10 repeticiones más cada mes hasta lograr resultados deseados.";
 		}
 		if (MIC < 18){
-			ejercicio = "Se recomienda hacer 10 minutos de cardio al dÃ­a seguido de 5 sets de 30 sentadillas, \n30 despechadas y 30 abdominales. Le exortamos a subir el nÃºmero de repeticiones cada mes a 10 mÃ¡s \nya que de esta manera seguira haciendo esfuerzo y manipulando el muscula para que crezca.";
+			ejercicio = "Se recomienda hacer 10 minutos de cardio al día seguido de 5 sets de 30 sentadillas, \n30 despechadas y 30 abdominales. Le exhortamos a aumentar el número de repeticiones cada mes a 10 más, \nya que de esta manera seguirá haciendo esfuerzo y manipulando el músculo para que este crezca.";
 		}
 		if (MIC > 18 && MIC <25){
-			ejercicio = "Se recomienda hacer 20 minutos de cardio al dÃ­a seguido de 4 sets de 20 sentadillas, \n20 despechadas y 20 burpees. Si desea lucir un cuerpo mÃ¡s marcado puede aumentar las repeticiones,\n pero si su meta es mantenerse en el peso ideal le exortamos a seguir nuetstra recomendaciÃ³n.";
+			ejercicio = "Se recomienda hacer 20 minutos de cardio al día seguido de 4 sets de 20 sentadillas, \n20 despechadas y 20 burpees. Si desea lucir un cuerpo más marcado puede aumentar las repeticiones,\n pero si su meta es mantenerse en el peso ideal, le exhortamos a seguir nuetstra recomendación.";
 		}
 		return ejercicio;
 	
@@ -77,7 +77,7 @@ public class Operaciones {
 				texto = temp;
 			
 			}catch(Exception e){
-				System.err.println("No se encontro archivo");
+				System.err.println("No se encontró el archivo.");
 		}	
 			return BaseDatos;
                 }
