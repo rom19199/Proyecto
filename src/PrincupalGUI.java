@@ -197,22 +197,22 @@ public class PrincupalGUI {
 		
 		panelAlimentacion = new JPanel();
 		panelAlimentacion.setLayout(null);
-		panelAlimentacion.setBorder(new TitledBorder(null, "Alimentacion", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panelAlimentacion.setBorder(new TitledBorder(null, "Alimentación", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panelAlimentacion.setBounds(12, 225, 736, 341);
 		frame.getContentPane().add(panelAlimentacion);
 		
-		lblMasaCorporal = new JLabel("Su indice de masa corporal es de: ");
+		lblMasaCorporal = new JLabel("Su índice de masa corporal es de: ");
 		lblMasaCorporal.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblMasaCorporal.setBounds(32, 112, 450, 16);
 		panelAlimentacion.add(lblMasaCorporal);
 		
-		lblBienvenido = new JLabel("Bienvendio ");
+		lblBienvenido = new JLabel("Bienvendo/a ");
 		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblBienvenido.setBounds(32, 33, 375, 16);
 		panelAlimentacion.add(lblBienvenido);
 		
 		textAreaAlimentacion = new JTextArea();
-		textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son:\r\n");
+		textAreaAlimentacion.setText("Algunas recomendaciones de alimentación son:\r\n");
 		textAreaAlimentacion.setFont(new Font("Courier New", Font.PLAIN, 12));
 		textAreaAlimentacion.setBounds(32, 180, 692, 134);
 		panelAlimentacion.add(textAreaAlimentacion);
@@ -232,11 +232,11 @@ public class PrincupalGUI {
 		
 		panelCondicionFisica = new JPanel();
 		panelCondicionFisica.setLayout(null);
-		panelCondicionFisica.setBorder(new TitledBorder(null, "Condicion Fisica", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panelCondicionFisica.setBorder(new TitledBorder(null, "Condición Física", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panelCondicionFisica.setBounds(12, 569, 736, 294);
 		frame.getContentPane().add(panelCondicionFisica);
 		
-		JLabel lblHorasEjercicio = new JLabel("\u00BFCuantas horas ejrcita al dia?");
+		JLabel lblHorasEjercicio = new JLabel("\u00BF¿Cuántas horas se ejercita al día?");
 		lblHorasEjercicio.setBounds(12, 32, 169, 16);
 		panelCondicionFisica.add(lblHorasEjercicio);
 		
@@ -245,7 +245,7 @@ public class PrincupalGUI {
 		txtHorasejercicioDia.setBounds(193, 29, 116, 22);
 		panelCondicionFisica.add(txtHorasejercicioDia);
 		
-		JLabel lblVecesEjercicioSemana = new JLabel("\u00BFCuantas veces a la semana ejercita?");
+		JLabel lblVecesEjercicioSemana = new JLabel("\u00BF¿Cuántas veces a la semana se ejercita?");
 		lblVecesEjercicioSemana.setBounds(12, 64, 231, 16);
 		panelCondicionFisica.add(lblVecesEjercicioSemana);
 		
@@ -302,11 +302,11 @@ public class PrincupalGUI {
 					//complexion.setText(oper.encontrarComplexion());
 					}
 	                else if (imc < 18){
-	                	textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: \n" + (oper.leerTxt("IMCbajo.txt").toString()));
+	                	textAreaAlimentacion.setText("Algunas recomendaciones de alimentación son: \n" + (oper.leerTxt("IMCbajo.txt").toString()));
 	                }
 	                                
 	                else if  (imc > 18 && imc < 25){
-	                    textAreaAlimentacion.setText("Algunas recomendaciones de alimentacion son: \n" + (oper.leerTxt("IMCnormal.txt").toString()));
+	                    textAreaAlimentacion.setText("Algunas recomendaciones de alimentación son: \n" + (oper.leerTxt("IMCnormal.txt").toString()));
 	                              
 	                }	
 				}
@@ -319,7 +319,7 @@ public class PrincupalGUI {
 						String dato = clientes.get(i).toString();
 						if(dato.contains(txtUsuario.getText()) && dato.contains(txtPassword.getText()))
 						{
-							lblBienvenido.setText("Bienvenido "+ clientes.get(i).getNombre());
+							lblBienvenido.setText("Bienvenido/a "+ clientes.get(i).getNombre());
 							clienteActual = oper.clienteActual(clientes.get(i).getNombre(), clientes);
 							
 							for (java.awt.Component component : panelLogSign.getComponents()) {
@@ -336,7 +336,7 @@ public class PrincupalGUI {
 					}
 					if(esta == false)
 					{
-						JOptionPane.showMessageDialog(null, "Los datos son incorectos porfavor intentelo de nuevo.");
+						JOptionPane.showMessageDialog(null, "Los datos son incorrectos, porfavor inténtelo de nuevo.");
 					}
 				}
 				
@@ -356,7 +356,7 @@ public class PrincupalGUI {
 					persona = new Usuario(txtNombreSign.getText(), txtApellidoSign.getText(), txtUsuarioSign.getText(), txtPasswordSign.getText(),
 							txtAlturaSign.getText(), txtPesoSign.getText(), txtEdadSign.getText());
 					clientes.add(persona);
-					JOptionPane.showMessageDialog(null, "Se suscribido exitosamente, ahora haga el log in.");
+					JOptionPane.showMessageDialog(null, "Se ha suscrito exitosamente, ahora haga el log in.");
 					panelLogSign.setEnabled(true);
 					panelSignUp.setEnabled(false);
 					oper.escribir(clientes);
