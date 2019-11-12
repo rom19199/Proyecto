@@ -139,7 +139,9 @@ public class Operaciones {
 	}
                 
 	
-	
+	public int agregarPesos(float peso, ArrayList<Usuario> user) {
+		user.add(peso);
+	}
 	
 	
 	
