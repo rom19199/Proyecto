@@ -6,6 +6,7 @@
  * @author raula
  *
  */
+import java.util.ArrayList;
 public class Usuario {
 	private String nombre;
 	private String apellido;
@@ -14,6 +15,7 @@ public class Usuario {
 	private String altura;
 	private String peso;
 	private String edad;
+	private ArrayList<String> pesos;
 
 	/**
 	 * 
